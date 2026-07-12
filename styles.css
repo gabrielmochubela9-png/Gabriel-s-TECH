@@ -265,6 +265,15 @@
     font-family:var(--font-mono); font-size:0.9rem;
   }
 
+  /* CORPORATE SECTION */
+  .corp-panel{padding:40px 34px; display:grid; gap:26px;}
+  .corp-row{display:flex; gap:14px; align-items:flex-start;}
+  .corp-row .icon{color:var(--cyan);}
+  .corp-cta{margin-top:34px; display:flex; gap:14px; flex-wrap:wrap;}
+  @media (max-width: 880px){
+    .corp-panel{padding:28px 22px;}
+  }
+
   footer{padding:44px 0 32px; border-top:1px solid var(--line);}
   .foot-grid{display:flex; justify-content:space-between; align-items:center; flex-wrap:wrap; gap:18px;}
   .foot-links{display:flex; gap:22px; font-family:var(--font-mono); font-size:0.78rem; color:var(--muted);}
