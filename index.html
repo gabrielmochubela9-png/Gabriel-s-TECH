@@ -263,6 +263,44 @@
     position:absolute; left:0; color:var(--gold); font-size:0.7rem; top:2px;
   }
 
+  /* FOUNDER LETTER */
+  .letter-section{ padding-top:72px; }
+  .letter-wrap{ max-width:860px; }
+  .letter-card{
+    padding:56px 60px; position:relative; overflow:hidden;
+  }
+  .letter-card::before{
+    content:""; position:absolute; top:-40%; right:-15%; width:60%; height:160%;
+    background:radial-gradient(circle, rgba(53,224,255,0.10), transparent 65%);
+    pointer-events:none;
+  }
+  .letter-head{ position:relative; z-index:1; text-align:center; margin-bottom:6px; }
+  .letter-head h2{ margin-bottom:0; }
+  .letter-head .tech{ color:var(--gold); }
+  .letter-mark{
+    font-family:var(--font-display); font-size:5rem; line-height:1; color:var(--gold);
+    opacity:0.35; text-align:center; margin:-6px 0 -22px; position:relative; z-index:1;
+  }
+  .letter-body{ position:relative; z-index:1; max-width:620px; margin:0 auto; text-align:center; }
+  .letter-body p{
+    color:var(--muted); font-size:1.02rem; line-height:1.75; margin-bottom:18px;
+  }
+  .letter-body p:first-child{ color:var(--text); font-weight:500; }
+  .letter-sign{
+    position:relative; z-index:1; text-align:center; margin-top:34px; padding-top:26px;
+    border-top:1px solid var(--line);
+  }
+  .sign-name{
+    font-family:var(--font-display); font-weight:600; font-size:1.25rem; color:var(--cyan);
+    letter-spacing:0.01em;
+  }
+  .sign-title{
+    font-family:var(--font-mono); font-size:0.78rem; color:var(--muted); margin-top:4px;
+  }
+  @media (max-width:640px){
+    .letter-card{ padding:40px 26px; }
+  }
+
   /* SERVICES */
   .services{background:linear-gradient(180deg, transparent, rgba(53,224,255,0.03), transparent);}
   .svc-grid{display:grid; grid-template-columns:repeat(3,1fr); gap:22px;}
@@ -587,6 +625,29 @@
       <div><strong>8+</strong><span>builds shipped</span></div>
       <div><strong>100%</strong><span>custom-coded</span></div>
       <div><strong>&lt; 48h</strong><span>quote turnaround</span></div>
+    </div>
+  </div>
+</section>
+
+<section id="founder-letter" class="letter-section">
+  <div class="wrap letter-wrap">
+    <div class="glass letter-card">
+      <div class="letter-head">
+        <div class="tag tag-gold">a letter from the founder</div>
+        <h2>Welcome to Gabriel's&nbsp;<span class="tech">TECH</span></h2>
+      </div>
+      <div class="letter-mark">&ldquo;</div>
+      <div class="letter-body">
+        <p>Thank you for taking the time to learn more about our company.</p>
+        <p>Gabriel's TECH was founded with one clear vision &mdash; to help South African businesses compete and grow through modern technology.</p>
+        <p>We believe technology should do more than look impressive. It should help businesses attract customers, improve efficiency, strengthen security, and support long-term growth. Every solution we build is designed with that purpose in mind.</p>
+        <p>We are committed to building long-term partnerships based on trust, professionalism, and measurable results.</p>
+        <p>We look forward to the opportunity to work with your organization.</p>
+      </div>
+      <div class="letter-sign">
+        <div class="sign-name">Gabriel Mochubela</div>
+        <div class="sign-title">Founder &amp; Managing Director</div>
+      </div>
     </div>
   </div>
 </section>
