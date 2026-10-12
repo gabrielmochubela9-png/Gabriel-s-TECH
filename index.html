@@ -573,6 +573,48 @@
     90%{ opacity:0.5; }
     100%{ transform:translateY(-620px) translateX(20px); opacity:0; }
   }
+
+  /* ===== MOBILE FIXES: stop sideways movement ===== */
+  html{max-width:100%;}
+  @supports (overflow:clip){ html,body{overflow-x:clip;} }
+  img,svg,video,canvas,iframe{max-width:100%;}
+  /* closed slide-in menu must not count towards page width */
+  .mobile-menu{ visibility:hidden; transition:transform .35s ease, visibility 0s linear .35s; height:100vh; height:100dvh; }
+  .mobile-menu.open{ visibility:visible; transition:transform .35s ease, visibility 0s; }
+  /* grid children may shrink instead of pushing the page wider */
+  .about-grid>*, .owner-grid>*, .reach>*, .contact-inner>*, .svc-grid>*, .pf-grid>*, .price-grid>*{ min-width:0; }
+  .foot-links{ flex-wrap:wrap; }
+  .subpage-bar-inner{ flex-wrap:wrap; gap:6px 16px; }
+  .hero{ min-height:100vh; min-height:100svh; }
+  @media (max-width:880px){
+    .about-grid, .owner-grid, .reach, .contact-inner{ grid-template-columns:minmax(0,1fr); }
+    .price-grid{ grid-template-columns:minmax(0,1fr); }
+    .svc-grid, .pf-grid{ grid-template-columns:repeat(2,minmax(0,1fr)); }
+    .about-grid, .owner-grid, .contact-inner{ gap:32px; }
+    section{ padding:64px 0; }
+    .wrap{ padding:0 20px; }
+    nav{ padding:14px 20px; }
+    h1,h2,h3,p,li,a,.lede,.contact-info,.owner-quote,.sec-head{ overflow-wrap:anywhere; }
+    /* 16px stops iPhones zooming in (and sliding sideways) when a field is tapped */
+    form input, form select, form textarea{ width:100%; max-width:100%; min-width:0; font-size:16px; }
+    .reach-text{ padding:32px 22px; }
+    .reach-media{ min-height:240px; }
+    .reach-media::after{ background:linear-gradient(180deg, var(--panel) 0%, transparent 35%); }
+    .hero-stats{ gap:22px 28px; margin-top:44px; }
+    .owner-meta{ gap:18px 24px; }
+  }
+  @media (max-width:520px){
+    .svc-grid, .pf-grid{ grid-template-columns:minmax(0,1fr); }
+    .wrap{ padding:0 16px; }
+    nav{ padding:12px 16px; }
+    .letter-card{ padding:32px 20px; }
+    .contact-wrap{ padding:26px 16px; }
+    .price-card{ padding:28px 20px; }
+    .foot-links{ gap:10px 16px; }
+    .owner-quote{ font-size:1.25rem; }
+    #backToTop{ right:14px; bottom:14px; }
+    #waBubble{ right:14px; bottom:68px; }
+  }
 </style>
 </head>
 <body class="intro-lock">
